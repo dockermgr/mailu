@@ -160,6 +160,7 @@ run_postinst() {
         echo "$SERVER_LISTEN     smtp.local" | sudo tee -a /etc/hosts &>/dev/null
         echo "$SERVER_LISTEN     pop.local" | sudo tee -a /etc/hosts &>/dev/null
         echo "$SERVER_LISTEN     imap.local" | sudo tee -a /etc/hosts &>/dev/null
+        echo "$SERVER_LISTEN     $APPNAME.local" | sudo tee -a /etc/hosts &>/dev/null
       else
         echo "$SERVER_LISTEN     $APPNAME.local" | sudo tee -a /etc/hosts &>/dev/null
         echo "$SERVER_LISTEN     $SERVER_HOST" | sudo tee -a /etc/hosts &>/dev/null
