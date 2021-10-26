@@ -109,7 +109,7 @@ ensure_dirs
 ensure_perms
 __sudo mkdir -p "$DATADIR/data"
 __sudo mkdir -p "$DATADIR/config"
-__sudo chmod -Rf 777 "$APPDIR"
+__sudo chmod -Rf 777 "$DATADIR"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Clone/update the repo
 if am_i_online; then
