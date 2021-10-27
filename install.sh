@@ -133,7 +133,7 @@ if [ -f "$INSTDIR/docker-compose.yml" ] && cmd_exists docker-compose; then
   sed -i "s|REPLACE_DATADIR|$DATADIR|g" "$INSTDIR/docker-compose.yml"
   sed -i "s|REPLACE_PROJECT_NAME|$APPNAME|g" "$INSTDIR/docker-compose.yml"
   if cd "$INSTDIR"; then
-    __sudo docker-compose -p "$APPNAME" up -d &>/dev/null
+    execute "__sudo docker-compose -p $APPNAME up -d &>/dev/null"
   fi
 else
   printf_exit "docker-compose is not installed"
